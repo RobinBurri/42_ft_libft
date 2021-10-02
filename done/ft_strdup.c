@@ -11,6 +11,11 @@ char    *ft_strdup(const char *s)
     ret = (char *)malloc((len + 1) * sizeof(char));
     if (ret == NULL)
         return (NULL);
-    ft_strcpy(ret, s);
+    while (s[i])
+    {
+        ret[i] = s[i];
+        i++;
+    }
+    ret[i] = '\0';
     return (ret);
 }
