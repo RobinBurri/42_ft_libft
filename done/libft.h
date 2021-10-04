@@ -52,6 +52,8 @@ ajoute un octet nul en fin de chaîne au résultat sauf si size est inférieur �
 La fonction renvoie la longueur de la chaîne que strlcat() a essayé de créer. 
 Si la valeur renvoyée est supérieure à size, c’est qu’il y a eu perte de données.*/
 
+char    *ft_strstr(const char *haystack, const char *needle);
+
 char    *ft_strdup(const char *s);
 /*ft_strdup() renvoie un pointeur sur une nouvelle chaîne de caractères qui est dupliquée depuis s.
 La mémoire occupée par cette nouvelle chaîne est obtenue en appelant malloc(3),
