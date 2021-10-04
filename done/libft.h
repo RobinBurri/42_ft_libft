@@ -62,6 +62,10 @@ char	*ft_strchr(const char *s, int c);
 /*ft_strchr() renvoie un pointeur sur la première occurrence du caractère c dans la chaîne s. 
 Elle renvoit un pointeur sur le caractère correspondant, ou NULL si le caractère n'a pas été trouvé. */
 
+char	*ft_strrchr(const char *s, int c);
+/*ft_strrchr() renvoie un pointeur sur la dernière occurrence du caractère c dans la chaîne s. 
+Elle renvoit un pointeur sur le caractère correspondant, ou NULL si le caractère n'a pas été trouvé. */
+
 void	*ft_memset(void *b, int c, size_t len);
 /*ft_memset() remplit les n premiers octets de la zone mémoire pointée par s avec l'octet c. */
 
