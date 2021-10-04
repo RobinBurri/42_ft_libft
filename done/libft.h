@@ -53,6 +53,18 @@ La fonction renvoie la longueur de la chaîne que strlcat() a essayé de créer.
 Si la valeur renvoyée est supérieure à size, c’est qu’il y a eu perte de données.*/
 
 char    *ft_strstr(const char *haystack, const char *needle);
+/*ft_strstr() cherche la première occurrence de la sous-chaîne aiguille au sein de la chaîne meule_de_foin.
+Les caractères « \0 » de fin ne sont pas comparés.*/
+
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+/*ft_strnstr() est identique sauf qu'elle ne cherche que les len (au plus) premiers caractères de meule_de_foin et aiguille.*/
+
+int		ft_strcmp(const char *s1, const char *s2);
+/*ft_strcmp() compare les deux chaînes s1 et s2. Elle renvoie un entier négatif, nul, ou positif,
+si s1 est respectivement inférieure, égale ou supérieure à s2.*/
+
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+/*ft_strncmp() est identique sauf qu'elle ne compare que les n (au plus) premiers caractères de s1 et s2.*/
 
 char    *ft_strdup(const char *s);
 /*ft_strdup() renvoie un pointeur sur une nouvelle chaîne de caractères qui est dupliquée depuis s.
