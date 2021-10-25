@@ -6,15 +6,14 @@
 
 int main()
 {
-    char *hay = "c'est donc ca la vie?";
-    char *ned = "";
+    // isalpha
+    char nonalpha = '@';
+    char alpha = 'z';
+    int res;
 
-    char *ret1;
-    char *ret2;
-    ret1 = strstr(hay, ned);
-    ret2 = ft_strstr(hay, ned);
-
-    printf("lib: %s\n", ret1);
-    printf("min: %s\n", ret2);
-
+    res = ft_isalpha(nonalpha);
+    printf("isalpha:\n");
+    printf("no (0): %d\n", res);
+    res = ft_isalpha(alpha);
+    printf("yes (!0): %d\n", res);
 }
