@@ -6,7 +6,6 @@
 #include <unistd.h>
 
 int		ft_isprint(int c);
-int		ft_isspace(int c);
 int		ft_isascii(int c);
 int		ft_isalnum(int c);
 int		ft_isdigit(int c);
@@ -15,8 +14,7 @@ int		ft_isalpha(int c);
 
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-void	ft_putchar(char c);
-void	ft_putstr(char const *s);
+
 
 void    ft_bzero(void *s, size_t n);
 /*ft_bzero() met à 0 (octets contenant « \0 ») les n premiers octets du bloc pointé par s.*/  
@@ -84,5 +82,57 @@ int		ft_atoi(const char *str);
 /*ft_atoi() convertit la chaîne pointée par str en entier de type int */
 
 
+
+/*Fonctions supplémentaires*/
+
+char *ft_substr(char const *s, unsigned int start,size_t len);
+/*Alloue (avec malloc(3)) et retourne une chaine de caractères issue de la chaine ’s’.
+Cette nouvelle chaine commence à l’index ’start’ e ta pour taille maximale ’len’
+Valeur de retour: La nouvelle chaine de caractere. NULL si l’allocation échoue*/
+
+char *ft_strjoin(char const *s1, char const *s2);
+/*Alloue (avec malloc(3)) et retourne une nouvellechaine, résultat de la concaténation de s1 et s2.
+Valeur de retour: La nouvelle chaine de caractere. NULL si l’allocation échoue*/
+
+char *ft_strtrim(char const *s1, char const *set);
+/*Alloue (avec malloc(3)) et retourne une copie dela chaine ’s1’,
+sans les caractères spécifiés dans ’set’ au début et à la fin de la chaine de caractères.
+Valeur de retour: La chaine de caractères trimmée. NULL si l’allocation échoue. */
+
+char **ft_split(char const *s, char c);
+/*Alloue (avec malloc(3)) et retourne un tableaude chaines de caracteres obtenu en séparant ’s’ àl’aide du caractère ’c’,
+utilisé comme délimiteur.Le tableau doit être terminé par NULL
+Valeur de retour: Le tableau de nouvelles chaines de caractères, résultant du découpage. 
+NULL si l’allocation échoue. */
+
+char *ft_itoa(int n);
+/*
+Alloue (avec malloc(3)) et retourne une chaine de caractères représentant l’integer reçu en argument.
+Les nombres négatifs doivent être gérés.
+Valeur de retour: La chaine de caractères représentant l’integer.NULL si l’allocation échoue.*/
+
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+/*Applique la fonction ’f’ à chaque caractère de la chaine de caractères passée en argument pour créer
+une nouvelle chaine de caractères (avec malloc(3))résultant des applications successives de ’f’.
+Valeur de retour: La chaine de caractères résultant des applications successives de f. 
+Retourne NULL si l’allocation échoue.*/
+
+void ft_striteri(char *s, void (*f)(unsigned int, char*));
+/*Applique la fonction f à chaque caractère de lachaîne de caractères transmise comme argument,
+et en passant son index comme premier argument.
+Chaque caractère est transmis par adresse à f pour être modifié si nécessaire.
+*/
+
+void ft_putchar_fd(char c, int fd);
+/*Écrit le caractère ’c’ sur le file descriptor donné.*/
+
+void ft_putstr_fd(char *s, int fd);
+/*Écrit la chaine de caractères ’s’ sur le file descriptor donné.*/
+
+void ft_putendl_fd(char *s, int fd);
+/*Écrit La chaine de caractères ’s’ sur le file descriptor donné, suivie d’un retour à la ligne.*/
+
+void ft_putnbr_fd(int n, int fd);
+/*Écrit l’integer ’n’ sur le file descriptor donné.*/
 
 #endif

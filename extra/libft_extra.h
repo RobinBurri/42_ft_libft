@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+int		ft_isspace(int c);
+void	ft_putchar(char c);
+void	ft_putstr(char const *s);
+
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 /*ft_memccpy() copie au plus n octets de la zone mémoire src vers la zone mémoire dest, 
 s'arrêtant dès qu'elle rencontre le caractère c.
