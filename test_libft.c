@@ -332,6 +332,24 @@ int main()
 	b = ft_calloc(10, 4);
 	printf("%p\n%p\n", b, b + 10);
 	free(b);
+
+	/*SUBSTR*/
+	char *test = "allez c'est super de tester toutes ces fonctions";
+	char *sub;
+	char *ft_sub;
+	ft_sub = ft_substr(test, 5, 15);
+	printf("'libr': %s\n", ft_sub);
+	sub = substr(test, 5, 15);
+	printf("'mine': %s\n", sub);
+	free(sub);
+	free(ft_sub);
+	/**/
+	/**/
+	/**/
+	/**/
+	/**/
+	/**/
+	/**/
 	
 }
 
