@@ -6,7 +6,7 @@
 /*   By: rburri <rburri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 11:04:22 by rburri            #+#    #+#             */
-/*   Updated: 2021/10/25 11:04:26 by rburri           ###   ########.fr       */
+/*   Updated: 2021/10/26 14:12:52 by rburri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	{
 		j = 0;
 		while (i + j < len && haystack[i + j] == needle[j])
-        {
-            j++;
-            if (needle[j] == '\0')
-                return ((char *)haystack + i);
-        }
+		{
+			j++;
+			if (needle[j] == '\0')
+				return ((char *)haystack + i);
+		}
 		i++;
 	}
 	return (NULL);

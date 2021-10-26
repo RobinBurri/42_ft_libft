@@ -6,7 +6,7 @@
 /*   By: rburri <rburri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 10:54:19 by rburri            #+#    #+#             */
-/*   Updated: 2021/10/26 10:01:42 by rburri           ###   ########.fr       */
+/*   Updated: 2021/10/26 14:21:36 by rburri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ void	*ft_memset(void *b, int c, size_t len)
 
 	i = 0;
 	while (i < len)
-    {
+	{
 		((char *)b)[i] = (unsigned char)c;
-        i++;
-    }
+		i++;
+	}
 	return (b);
 }

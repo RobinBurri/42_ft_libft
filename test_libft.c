@@ -325,6 +325,13 @@ int main()
     free(b);
     
 	/*CALLOC*/
+	printf("\033[0;35mCALLOC\033[0;37m\n");
+	b = calloc(10, 4);
+	printf("%p\n%p\n", b, b + 10);
+    free(b);
+	b = ft_calloc(10, 4);
+	printf("%p\n%p\n", b, b + 10);
+	free(b);
 	
 }
 

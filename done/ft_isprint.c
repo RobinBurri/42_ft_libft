@@ -6,14 +6,13 @@
 /*   By: rburri <rburri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 10:51:22 by rburri            #+#    #+#             */
-/*   Updated: 2021/10/25 10:51:24 by rburri           ###   ########.fr       */
+/*   Updated: 2021/10/26 14:24:03 by rburri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-int		ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }

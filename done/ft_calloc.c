@@ -6,7 +6,7 @@
 /*   By: rburri <rburri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 11:54:38 by rburri            #+#    #+#             */
-/*   Updated: 2021/10/25 11:55:34 by rburri           ###   ########.fr       */
+/*   Updated: 2021/10/26 14:24:38 by rburri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ void	*ft_calloc(size_t count, size_t size)
 	void	*dst;
 
 	tot_size = size * count;
-	if (!(dst = malloc(tot_size)))
+	dst = malloc(tot_size);
+	if (dst == NULL)
 		return (0);
 	ft_memset(dst, 0, tot_size);
 	return (dst);
