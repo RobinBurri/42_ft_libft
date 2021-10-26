@@ -6,7 +6,7 @@
 #    By: rburri <rburri@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/25 13:29:27 by rburri            #+#    #+#              #
-#    Updated: 2021/10/25 14:45:07 by rburri           ###   ########.fr        #
+#    Updated: 2021/10/26 16:26:42 by rburri           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,14 +20,11 @@ FILES = 	ft_atoi.c \
 			ft_isascii.c \
 			ft_isdigit.c \
 			ft_isprint.c \
-			ft_isspace.c \
 			ft_memchr.c \
 			ft_memcmp.c \
 			ft_memcpy.c \
 			ft_memmove.c \
 			ft_memset.c \
-			ft_putchar.c \
-			ft_putstr.c \
 			ft_strchr.c \
 			ft_strdup.c \
 			ft_strlcat.c \
@@ -38,6 +35,10 @@ FILES = 	ft_atoi.c \
 			ft_strrchr.c \
 			ft_tolower.c \
 			ft_toupper.c \
+			ft_strjoin.c \
+			ft_strtrim.c \
+			ft_substr.c \
+			
 
 			
 OBJECTS =	$(FILES:.c=.o)

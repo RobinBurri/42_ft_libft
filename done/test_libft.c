@@ -334,22 +334,45 @@ int main()
 	free(b);
 
 	/*SUBSTR*/
-	char *test = "allez c'est super de tester toutes ces fonctions";
-	char *sub;
+	printf("\033[0;35mSUBSTR\033[0;37m\n");
+	char *string1 = "allez c'est super de tester toutes ces fonctions";
 	char *ft_sub;
-	ft_sub = ft_substr(test, 5, 15);
-	printf("'libr': %s\n", ft_sub);
-	sub = substr(test, 5, 15);
-	printf("'mine': %s\n", sub);
-	free(sub);
+	ft_sub = ft_substr(string1, 6, 25);
+	printf("%s\n", ft_sub);
 	free(ft_sub);
-	/**/
-	/**/
-	/**/
-	/**/
-	/**/
-	/**/
-	/**/
+
+	/*STRJOIN*/
+	printf("\033[0;35mSTRJOIN\033[0;37m\n");
+	char *a = "first string";
+	char *d = " + seconde string\n";
+	char *c;
+	c = ft_strjoin(a, d);
+	printf("%s", c);
+	free(c);
+	
+	/*FT_STRTRIM*/
+	printf("\033[0;35mSTRTRIM\033[0;37m\n");
+	char *s1 = "++++---+hello+++--++";
+	char *set = "+-";
+	char *res;
+	res = ft_strtrim(s1, set);
+	printf("%s\n", res);
+
+	/*STRMAPI*/
+
+	/*STRITERI*/
+
+	/*SPLIT*/
+
+	/*ITOA*/
+
+	/*PUTCHR_FD*/
+
+	/*PUTENDL_FD*/
+
+	/*PUTNBR_FD*/
+	
+	/*PUTSTR_FD*/
 	
 }
 

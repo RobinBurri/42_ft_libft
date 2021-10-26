@@ -17,20 +17,19 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*newstr;
 	size_t	i;
 	size_t	st;
-	int slen;
 	
 	st = len;
 	i = 0;
-	slen = ft_strlen(s);
 	if (s == NULL)
 		return (NULL);
-	newstr = (char *)malloc(sizeof(char) * len + 1);
+	newstr = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!newstr)
 		return (NULL);
-	while (start < slen && i < len)
+	while (start < ft_strlen(s) && i < len)
 	{
-		newstr[i] = s[st + i];
+		newstr[i] = s[start];
 		i++;
+		start++;
 	}
 	newstr[i] = '\0';
 	return (newstr);
