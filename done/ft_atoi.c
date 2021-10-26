@@ -6,7 +6,7 @@
 /*   By: rburri <rburri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 11:04:37 by rburri            #+#    #+#             */
-/*   Updated: 2021/10/25 11:04:38 by rburri           ###   ########.fr       */
+/*   Updated: 2021/10/26 11:35:52 by rburri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,26 @@
 
 int		ft_atoi(const char *str)
 {
-	int c;
+	int i;
 	int sign;
 	int res;
 
-	c = 0;
+	i = 0;
 	sign = 1;
 	res = 0;
-	while (str[c] == ' ' || str[c] == '\n' || str[c] == '\t' ||
-			str[c] == '\v' || str[c] == '\f' || str[c] == '\r')
-		c++;
-	if (str[c] == '-' || str[c] == '+')
+	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t' ||
+			str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		if (str[c] == '-')
+		if (str[i] == '-')
 			sign = -1;
-		c++;
+		i++;
 	}
-	while (str[c] >= '0' && str[c] <= '9')
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res = (res * 10) + (str[c] - '0');
-		c++;
+		res = (res * 10) + (str[i] - '0');
+		i++;
 	}
 	return (res * sign);
 }

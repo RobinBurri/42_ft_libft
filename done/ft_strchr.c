@@ -6,7 +6,7 @@
 /*   By: rburri <rburri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 11:01:22 by rburri            #+#    #+#             */
-/*   Updated: 2021/10/25 11:01:25 by rburri           ###   ########.fr       */
+/*   Updated: 2021/10/26 08:37:03 by rburri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	size_t	i;
+	int	i;
 
     i = 0;
 	while (s[i])
