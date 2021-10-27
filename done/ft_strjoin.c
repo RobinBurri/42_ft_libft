@@ -6,7 +6,7 @@
 /*   By: rburri <rburri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 15:13:13 by rburri            #+#    #+#             */
-/*   Updated: 2021/10/26 15:45:12 by rburri           ###   ########.fr       */
+/*   Updated: 2021/10/27 12:14:13 by rburri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	while (s2[j])
 		new_str[i++] = s2[j++];
 	new_str[i] = '\0';
-	return (new_str);		
+	return (new_str);
 }

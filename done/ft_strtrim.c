@@ -6,19 +6,19 @@
 /*   By: rburri <rburri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 15:48:06 by rburri            #+#    #+#             */
-/*   Updated: 2021/10/27 08:18:15 by rburri           ###   ########.fr       */
+/*   Updated: 2021/10/27 12:07:59 by rburri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-static	int		ft_isset(char const *set, char c)
+static	int	ft_isset(char const *set, char c)
 {
 	int	i;
-	
+
 	i = 0;
-	while(set[i])
+	while (set[i])
 	{
 		if (c == set[i])
 			return (1);

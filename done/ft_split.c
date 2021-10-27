@@ -6,7 +6,7 @@
 /*   By: rburri <rburri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 09:55:08 by rburri            #+#    #+#             */
-/*   Updated: 2021/10/27 11:29:31 by rburri           ###   ########.fr       */
+/*   Updated: 2021/10/27 12:13:10 by rburri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 static int	ft_count_words(const char *str, char c)
 {
 	int	trigger;
-	int words;
+	int	words;
 
 	words = 0;
 	trigger = 0;
-	while(*str)
+	while (*str)
 	{
 		if (*str != c && trigger == 0)
 		{
@@ -35,7 +35,9 @@ static int	ft_count_words(const char *str, char c)
 
 static char	*ft_write_string(char *dest, const char *src, char c)
 {
-	int i = 0;
+	int	i;
+
+	i = 0;
 	while (src[i] != c)
 	{
 		dest[i] = src[i];
@@ -45,11 +47,11 @@ static char	*ft_write_string(char *dest, const char *src, char c)
 	return (dest);
 }
 
-static void ft_create_string(char **split, const char *str, char c)
+static void	ft_create_string(char **split, const char *str, char c)
 {
 	int	strnum;
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	strnum = 0;
 	i = 0;
@@ -72,12 +74,12 @@ static void ft_create_string(char **split, const char *str, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	char **split;
-	int string_count;
-	
+	char	**split;
+	int		string_count;
+
 	string_count = ft_count_words(s, c);
 	if (!s)
-		return(NULL);
+		return (NULL);
 	split = (char **)malloc((string_count + 1) * sizeof(char *));
 	if (!split)
 		return (NULL);
