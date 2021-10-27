@@ -6,7 +6,7 @@
 /*   By: rburri <rburri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 09:55:08 by rburri            #+#    #+#             */
-/*   Updated: 2021/10/27 12:13:10 by rburri           ###   ########.fr       */
+/*   Updated: 2021/10/27 16:26:37 by rburri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ static void	ft_create_string(char **split, const char *str, char c)
 			while (str[i + j] != c && str[i + j] != '\0')
 				j++;
 			split[strnum] = (char *)malloc(sizeof(char) * (j + 1));
+			if (split[strnum] == NULL)
+				return ;
 			ft_write_string(split[strnum], str + i, c);
 			i += j;
 			strnum++;
@@ -77,9 +79,9 @@ char	**ft_split(char const *s, char c)
 	char	**split;
 	int		string_count;
 
-	string_count = ft_count_words(s, c);
 	if (!s)
 		return (NULL);
+	string_count = ft_count_words(s, c);
 	split = (char **)malloc((string_count + 1) * sizeof(char *));
 	if (!split)
 		return (NULL);
