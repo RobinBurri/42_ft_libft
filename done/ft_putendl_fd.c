@@ -6,7 +6,7 @@
 /*   By: rburri <rburri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 13:46:48 by rburri            #+#    #+#             */
-/*   Updated: 2021/10/26 13:52:22 by rburri           ###   ########.fr       */
+/*   Updated: 2021/10/27 12:02:17 by rburri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (s != '\0')
+	if (s != NULL)
 	{
 		ft_putstr_fd(s, fd);
 		ft_putchar_fd('\n', fd);
