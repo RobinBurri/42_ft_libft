@@ -6,7 +6,7 @@
 #    By: rburri <rburri@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/25 13:29:27 by rburri            #+#    #+#              #
-#    Updated: 2021/10/26 16:26:42 by rburri           ###   ########.fr        #
+#    Updated: 2021/10/27 11:43:24 by rburri           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,8 +38,14 @@ FILES = 	ft_atoi.c \
 			ft_strjoin.c \
 			ft_strtrim.c \
 			ft_substr.c \
-			
-
+			ft_itoa.c \
+			ft_striteri.c \
+			ft_strmapi.c \
+			ft_split.c \
+			ft_putchar_fd.c \
+			ft_putendl_fd.c \
+			ft_putnbr_fd.c \
+			ft_putstr_fd.c \
 			
 OBJECTS =	$(FILES:.c=.o)
 

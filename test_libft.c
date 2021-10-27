@@ -359,20 +359,63 @@ int main()
 	printf("%s\n", res);
 
 	/*STRMAPI*/
+	printf("\033[0;35mSTRMAPI033[0;37m\n");
 
 	/*STRITERI*/
+	printf("\033[0;35mSTRITERI\033[0;37m\n");
 
 	/*SPLIT*/
-
+	printf("\033[0;35mSPLIT\033[0;37m\n");
+	char c = 'e';
+	char *set = "C'est un string test!";
+	char **sp;
+	int i =0;
+	sp = ft_split(set, c);
+	while (sp[i] != 0)
+	{
+		printf("%s\n", sp[i]);
+		i++;
+	}
+	
 	/*ITOA*/
+	printf("\033[0;35mITOA\033[0;37m\n");
+	int t = -2147483647;
+	char *rr;
+	rr = ft_itoa(t);
+	if (ft_strncmp(rr, "-2147483647", 11) == 0)
+		printf("-2147483647: \033[0;32mok\n\033[0;37m");
+	else
+		printf("-2147483647: \033[0;31mfail\n\033[0;37m");
+	t = 0;
+	rr = ft_itoa(t);
+	if (ft_strncmp(rr, "0", 11) == 0)
+		printf("0: \033[0;32mok\n\033[0;37m");
+	else
+		printf("0: \033[0;31mfail\n\033[0;37m");
+	t = 123456;
+	rr = ft_itoa(t);
+	if (ft_strncmp(rr, "123456", 11) == 0)
+		printf("123456: \033[0;32mok\n\033[0;37m");
+	else
+		printf("123456: \033[0;31mfail\n\033[0;37m");
+	t = -123456;
+	rr = ft_itoa(t);
+	if (ft_strncmp(rr, "-123456", 11) == 0)
+		printf("-123456: \033[0;32mok\n\033[0;37m");
+	else
+		printf("-123456: \033[0;31mfail\n\033[0;37m");
 
 	/*PUTCHR_FD*/
+	printf("\033[0;35mFD_PUTCHR\033[0;37m\n");
 
 	/*PUTENDL_FD*/
+	printf("\033[0;35mFD_PUTENDL\033[0;37m\n");
 
 	/*PUTNBR_FD*/
+	printf("\033[0;35mFD_PUTNBR\033[0;37m\n");
 	
 	/*PUTSTR_FD*/
+	printf("\033[0;35mFD_PUTSTR\033[0;37m\n");
 	
 }
 

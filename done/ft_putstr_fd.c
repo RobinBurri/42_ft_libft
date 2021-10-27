@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rburri <rburri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 13:46:34 by rburri            #+#    #+#             */
-/*   Updated: 2021/10/26 13:52:44 by rburri           ###   ########.fr       */
+/*   Created: 2021/10/27 11:34:15 by rburri            #+#    #+#             */
+/*   Updated: 2021/10/27 11:34:42 by rburri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@ void	ft_putstr_fd(char *str, int fd)
 	int	i;
 
 	i = 0;
-	if (str != NULL)
+	if (!str)
+		return ;
+	while (str[i])
 	{
-		while (str[i])
-			ft_putchar_fd(str[i++], fd);
+		ft_putchar_fd(str[i], fd);
+		i++;
 	}
 }

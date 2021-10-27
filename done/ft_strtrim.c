@@ -6,14 +6,14 @@
 /*   By: rburri <rburri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 15:48:06 by rburri            #+#    #+#             */
-/*   Updated: 2021/10/26 16:17:20 by rburri           ###   ########.fr       */
+/*   Updated: 2021/10/27 08:18:15 by rburri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int		ft_isset(char const *set, char c)
+static	int		ft_isset(char const *set, char c)
 {
 	int	i;
 	

@@ -1,40 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rburri <rburri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 13:46:58 by rburri            #+#    #+#             */
-/*   Updated: 2021/10/26 13:46:59 by rburri           ###   ########.fr       */
+/*   Created: 2021/10/27 09:44:31 by rburri            #+#    #+#             */
+/*   Updated: 2021/10/27 09:51:21 by rburri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char			*str;
-	size_t			size;
-	long			nbr;
-
-	nbr = n;
-	size = n > 0 ? 0 : 1;
-	nbr = nbr > 0 ? nbr : -nbr;
-	while (n)
-		n = size++ ? n / 10 : n / 10;
-	str = (char*)malloc(sizeof(char) * size + 1);
+	char	*str;
+	int		i;
+	size_t	len;
+	
+	len = ft_strlen(s);
+	i = 0;
+	if (s == NULL)
+		return (NULL);
+	str = (char *)malloc(len + 1);
 	if (!str)
 		return (NULL);
-	*(str + size--) = '\0';
-	while (nbr > 0)
+	ft_strlcpy(str, s, len + 1);
+	while (str[i])
 	{
-		*(str + size--) = nbr % 10 + '0';
-		nbr /= 10;
+		str[i] = (*f)(i, str[i]);
+		i++;
 	}
-	if (size == 0 && str[1] == '\0')
-		*(str + size) = '0';
-	else if (size == 0 && str[1] != '\0')
-		*(str + size) = '-';
 	return (str);
 }
