@@ -6,7 +6,7 @@
 /*   By: rburri <rburri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 11:16:20 by rburri            #+#    #+#             */
-/*   Updated: 2021/10/28 09:17:34 by rburri           ###   ########.fr       */
+/*   Updated: 2021/10/28 11:34:11 by rburri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t c;
-	size_t d;
+	size_t	c;
+	size_t	d;
 
 	if (size <= ft_strlen(dest))
 		return (size + ft_strlen(src));

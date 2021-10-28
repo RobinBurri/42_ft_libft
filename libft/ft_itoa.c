@@ -6,7 +6,7 @@
 /*   By: rburri <rburri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 08:02:15 by rburri            #+#    #+#             */
-/*   Updated: 2021/10/27 14:42:09 by rburri           ###   ########.fr       */
+/*   Updated: 2021/10/28 11:47:12 by rburri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,17 @@ static int	ft_nbdigits(int nb)
 	return (res);
 }
 
+static int	ft_cnt_len(int n)
+{
+	int	len;
+
+	if (n < 0)
+		len = ft_nbdigits(n) + 1;
+	else
+		len = ft_nbdigits(n);
+	return (len);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*res;
@@ -38,12 +49,8 @@ char	*ft_itoa(int n)
 
 	nbr = n;
 	if (nbr < 0)
-	{
 		nbr *= -1;
-		len = ft_nbdigits(n) + 1;
-	}
-	else
-		len = ft_nbdigits(n);
+	len = ft_cnt_len(n);
 	res = (char *)malloc(sizeof(char) * len + 1);
 	if (res == NULL)
 		return (NULL);
