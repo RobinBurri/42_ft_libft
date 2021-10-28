@@ -6,11 +6,13 @@
 /*   By: rburri <rburri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 09:55:08 by rburri            #+#    #+#             */
-/*   Updated: 2021/10/27 16:26:37 by rburri           ###   ########.fr       */
+/*   Updated: 2021/10/28 10:12:45 by rburri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
 static int	ft_count_words(const char *str, char c)
 {
@@ -38,7 +40,7 @@ static char	*ft_write_string(char *dest, const char *src, char c)
 	int	i;
 
 	i = 0;
-	while (src[i] != c)
+	while (src[i] != c && src[i])
 	{
 		dest[i] = src[i];
 		i++;
