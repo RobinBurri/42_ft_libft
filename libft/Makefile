@@ -12,10 +12,6 @@
 
 NAME = libft.a
 
-CC = gcc
-
-CFLAGS = -Wall -Werror -Wextra
-
 FILES = 	ft_atoi.c \
 			ft_bzero.c \
 			ft_calloc.c \
@@ -51,24 +47,29 @@ FILES = 	ft_atoi.c \
 			ft_putnbr_fd.c \
 			ft_putstr_fd.c \
 			
+OBJECTS =	$(FILES:.c=.o)
+
+
+HEADERS = libft.h 
+
+FLAGS = -Wall -Werror -Wextra
+
+CC = gcc -c $(FLAGS)
 
 all: $(NAME)
 
-OBJECTS =	$(FILES:.c=.o)
-
-%.o: %.c
-	$(CC) -c $(CFLAGS) $< -o $@ 
-
 $(NAME): $(OBJECTS)
-	ar rc ${NAME} $(OBJECTS)
+	ar rc libft.a $(OBJECTS)
 
 clean:
-	rm -f $(OBJECTS)
+	/bin/rm -f $(OBJECTS)
 
 fclean: clean
-	rm -f  $(NAME)
+	/bin/rm -f  $(NAME)
 
 re: fclean all
 
+%.o: %.c
+	$(CC) $< -I $(HEADERS) -o $@ 
 
 .PHONY:	all clean fclean re

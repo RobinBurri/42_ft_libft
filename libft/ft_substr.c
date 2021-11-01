@@ -15,22 +15,25 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*newstr;
+	size_t	max_len;
 	size_t	i;
-	size_t	j;
-	size_t max_len;
 
+	i = 0;
 	if (!s)
 		return (NULL);
-	if (len > ft_strlen(s))
-		max_len = ft_strlen(s);
+	if (len > ft_strlen(s) + 1)
+		max_len = ft_strlen(s) + 1;
 	else
 		max_len = len;
 	newstr = (char *)malloc(sizeof(char) * (max_len + 1));
 	if (!newstr)
 		return (NULL);
-	i = 0;
-	j = start;
-	while (j < ft_strlen(s) && i < max_len)
-		newstr[i++] = s[j++];
+	while (start < ft_strlen(s) && i < max_len)
+	{
+		newstr[i] = s[start];
+		i++;
+		start++;
+	}
+	newstr[i] = '\0';
 	return (newstr);
 }
