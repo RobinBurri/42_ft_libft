@@ -50,7 +50,7 @@ FILES = 	ft_atoi.c \
 OBJECTS =	$(FILES:.c=.o)
 
 
-HEADERS = libft.h 
+HEADERS = "libft.h "
 
 FLAGS = -Wall -Werror -Wextra
 

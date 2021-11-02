@@ -21,8 +21,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!s)
 		return (NULL);
-	if (len > ft_strlen(s) + 1)
-		max_len = ft_strlen(s) + 1;
+	if (len > ft_strlen(s))
+		max_len = ft_strlen(s);
 	else
 		max_len = len;
 	newstr = (char *)malloc(sizeof(char) * (max_len + 1));
