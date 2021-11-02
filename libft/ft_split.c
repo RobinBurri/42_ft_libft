@@ -6,13 +6,11 @@
 /*   By: rburri <rburri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 09:55:08 by rburri            #+#    #+#             */
-/*   Updated: 2021/10/28 10:12:45 by rburri           ###   ########.fr       */
+/*   Updated: 2021/11/02 19:34:53 by rburri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 static int	ft_count_words(const char *str, char c)
 {
