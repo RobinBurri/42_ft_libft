@@ -6,7 +6,7 @@
 #    By: rburri <rburri@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/25 13:29:27 by rburri            #+#    #+#              #
-#    Updated: 2021/10/27 17:29:51 by rburri           ###   ########.fr        #
+#    Updated: 2021/11/02 19:11:06 by rburri           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,9 +49,6 @@ FILES = 	ft_atoi.c \
 			
 OBJECTS =	$(FILES:.c=.o)
 
-
-HEADERS = "libft.h "
-
 FLAGS = -Wall -Werror -Wextra
 
 CC = gcc -c $(FLAGS)
@@ -61,6 +58,9 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	ar rc libft.a $(OBJECTS)
 
+%.o: %.c
+	$(CC) $< -o $@ 
+	
 clean:
 	/bin/rm -f $(OBJECTS)
 
@@ -68,8 +68,5 @@ fclean: clean
 	/bin/rm -f  $(NAME)
 
 re: fclean all
-
-%.o: %.c
-	$(CC) $< -I $(HEADERS) -o $@ 
 
 .PHONY:	all clean fclean re
