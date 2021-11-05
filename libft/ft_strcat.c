@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rburri <rburri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/27 09:44:31 by rburri            #+#    #+#             */
-/*   Updated: 2021/11/03 14:46:37 by rburri           ###   ########.fr       */
+/*   Created: 2021/10/27 11:46:04 by rburri            #+#    #+#             */
+/*   Updated: 2021/10/27 11:46:05 by rburri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char    *ft_strcat(char *dest, const char *src)
 {
-	char	*str;
-	int		i;
-	size_t	len;
-
-	len = ft_strlen(s);
-	i = 0;
-	if (s == NULL)
-		return (NULL);
-	str = (char *)malloc(len + 1);
-	if (!str)
-		return (NULL);
-	ft_strlcpy(str, s, len + 1);
-	while (str[i])
-	{
-		str[i] = (*f)(i, str[i]);
-		i++;
-	}
-	return (str);
+    int i;
+    int j;
+    
+    j = 0;
+    i = 0;
+    while (dest[i])
+        i++;
+    while (src[j])
+    {
+        dest[i] = src[j];
+        i++;
+        j++;
+    }
+    dest[i] = '\0';
+    return (dest);
 }
