@@ -16,6 +16,10 @@ void	char_to_index(unsigned int i, char *c)
 {
 	*c = i % 10 + 48;
 }
+// void	char_to_map(unsigned int i, char c)
+// {
+// 	c =  c + i;
+// }
 
 
 int main()
@@ -184,7 +188,7 @@ int main()
     size_t re1;
     size_t re2;
     printf("\033[0;35mSTRLCAT\033[0;37m\n");
-    strlcat(dst1, test1, 50);
+    strlcat(dst1, test6, 50);
     re1 = strlcat(dst1, test1b, 50);
     ft_strlcat(dst2, test2, 50);
     re2 = ft_strlcat(dst2, test2b, 50);
@@ -372,21 +376,33 @@ int main()
 	printf("%zu\n", ft_strlen(res));
 	printf("%s\n", res);
 	free(res);
-	// /*STRMAPI*/
+	
+	//  /*STRMAPI*/
 	// printf("\033[0;35mSTRMAPI\033[0;37m\n");
-
-	// /*STRITERI*/
-	// printf("\033[0;35mSTRITERI\033[0;37m\n");
 	// i = 0;
-	// char index[11];
+	// char *op;
+	// char s[11];
 	// while (i < 10)
 	// {
-	// 	index[i] = '0';
+	// 	s[i] = 'a';
 	// 	i++;
 	// }
-	// index[i] = '\0';
-	// ft_striteri(index, char_to_index);
-	// printf("%s\n", index);
+	// s[i] = '\0';
+	// op = ft_strmapi(s, char_to_map);
+	// printf("%s", op);
+
+	/*STRITERI*/
+	printf("\033[0;35mSTRITERI\033[0;37m\n");
+	i = 0;
+	char index[11];
+	while (i < 10)
+	{
+		index[i] = '0';
+		i++;
+	}
+	index[i] = '\0';
+	ft_striteri(index, char_to_index);
+	printf("%s\n", index);
 
 	/*SPLIT*/
 	printf("\033[0;35mSPLIT\033[0;37m\n");
