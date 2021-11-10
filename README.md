@@ -1,2 +1,3 @@
 # libft
-My own C library for 42
+42 student project.
+My own C library
