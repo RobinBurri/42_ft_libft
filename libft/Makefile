@@ -6,10 +6,16 @@
 #    By: rburri <rburri@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/25 13:29:27 by rburri            #+#    #+#              #
-#    Updated: 2021/12/17 14:08:32 by rburri           ###   ########.fr        #
+#    Updated: 2022/01/07 09:48:23 by rburri           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+####################################################################
+# COLORS
+GREEN = \033[0;32m
+RED = \033[0;31m
+RESET = \033[0m
+####################################################################
 NAME = libft.a
 
 FILES = 	ft_atoi.c ft_isspace.c ft_putchar.c ft_putnbr.c ft_putstr.c \
@@ -22,19 +28,24 @@ FILES = 	ft_atoi.c ft_isspace.c ft_putchar.c ft_putnbr.c ft_putstr.c \
 			ft_isprint.c ft_strncmp.c ft_strlen.c ft_strlcpy.c \
 			ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c \
 			ft_memset.c ft_strchr.c ft_strdup.c ft_strlcat.c \
-			get_next_line_utils.c get_next_line.c \
+			get_next_line_utils.c get_next_line.c ft_atoi_base.c\
+			ft_isupper.c ft_islower.c\
 
 			
-OBJECTS =	$(FILES:.c=.o)
+OBJECTS =  $(FILES:.c=.o)
 
 FLAGS = -Wall -Werror -Wextra
 
 CC = gcc -c $(FLAGS)
 
+MAKEFLAGS += --silent
+
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
 	ar rc libft.a $(OBJECTS)
+	@make clean
+	@echo "$(GREEN)Make libft done$(RESET)"
 
 %.o: %.c
 	$(CC) $< -o $@ 

@@ -6,7 +6,7 @@
 /*   By: rburri <rburri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 13:55:41 by rburri            #+#    #+#             */
-/*   Updated: 2021/12/17 14:04:10 by rburri           ###   ########.fr       */
+/*   Updated: 2022/01/07 09:28:45 by rburri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,6 +121,9 @@ int		ft_atoi(const char *str);
 /*ft_atoi() convertit la chaîne pointée par str en entier de type int */
 
 /*Fonctions supplémentaires*/
+int		ft_atoi_base(const char *str, int base);
+/*ft_atoi_base() convertit la chaîne pointée par str en entier de type int,
+suivant la base entree en parametre*/
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 /*Alloue (avec malloc(3)) et retourne une chaine de 
@@ -188,6 +191,8 @@ void	ft_putnbr_fd(int n, int fd);
 /*Écrit l’integer ’n’ sur le file descriptor donné.*/
 
 /*ADDED AFTER MOULINETTE*/
+int		ft_islower(int c);
+int		ft_isupper(int c);
 int		ft_isspace(int c);
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
