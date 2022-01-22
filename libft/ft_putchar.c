@@ -6,13 +6,13 @@
 /*   By: rburri <rburri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 11:16:54 by rburri            #+#    #+#             */
-/*   Updated: 2021/10/26 13:54:15 by rburri           ###   ########.fr       */
+/*   Updated: 2022/01/22 15:09:38 by rburri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+int	ft_putchar(char c)
 {
-	write(1, &c, 1);
+	return (write(1, &c, 1));
 }
