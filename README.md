@@ -1,3 +1,35 @@
-# libft
+# ft_libft
 42 student project.
-My own C library
+My own C library with the next functions:
+• isalpha
+• isdigit
+• isalnum
+• isascii
+• isprint
+• strlen
+• memset
+• bzero
+• memcpy
+• memmove
+• strlcpy
+• strlcat
+• toupper
+• tolower
+• strchr
+• strrchr
+• strncmp
+• memchr
+• memcmp
+• strnstr
+• atoi
+• calloc
+• substr
+• strjoin
+• strtrim
+• split
+• itoa
+• strmapi
+• striteri
+• putchar
+• putstr
+• putnbr
